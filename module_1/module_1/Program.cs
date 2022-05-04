@@ -14,6 +14,7 @@ namespace Module_1
             char[] second_Letter_Array = new char[n];
             int first_amount = 0;
             int second_amount = 0;
+            string str = @" AbcDEfgHIJklmnopqrstuvwxyz";
 
             for (int i = 0; i < n; i++)
             {
@@ -34,102 +35,23 @@ namespace Module_1
             Array.Reverse(second_Number_Array);
             for (int i = 0; i < n; i++)
             {
-                switch (first_Number_Array[i])
+                first_Letter_Array[i] = str[first_Number_Array[i]];
+                if ((first_Letter_Array[i] == 'A') || (first_Letter_Array[i] == 'E') || (first_Letter_Array[i] == 'I'))
                 {
-                    case 1:
-                        first_Letter_Array[i] = 'A';
-                        first_amount++;
-                        break;
-                    case 3:
-                        first_Letter_Array[i] = 'c';
-                        break;
-                    case 5:
-                        first_Letter_Array[i] = 'E';
-                        first_amount++;
-                        break;
-                    case 7:
-                        first_Letter_Array[i] = 'g';
-                        break;
-                    case 9:
-                        first_Letter_Array[i] = 'I';
-                        first_amount++;
-                        break;
-                    case 11:
-                        first_Letter_Array[i] = 'k';
-                        break;
-                    case 13:
-                        first_Letter_Array[i] = 'm';
-                        break;
-                    case 15:
-                        first_Letter_Array[i] = 'o';
-                        break;
-                    case 17:
-                        first_Letter_Array[i] = 'q';
-                        break;
-                    case 19:
-                        first_Letter_Array[i] = 's';
-                        break;
-                    case 21:
-                        first_Letter_Array[i] = 'u';
-                        break;
-                    case 23:
-                        first_Letter_Array[i] = 'w';
-                        break;
-                    case 25:
-                        first_Letter_Array[i] = 'y';
-                        break;
+                    first_amount++;
                 }
             }
 
             for (int i = 0; i < n; i++)
             {
-                switch (second_Number_Array[i])
+                second_Letter_Array[i] = str[second_Number_Array[i]];
+                if ((second_Letter_Array[i] == 'D') || (second_Letter_Array[i] == 'H') || (second_Letter_Array[i] == 'J'))
                 {
-                    case 2:
-                        second_Letter_Array[i] = 'b';
-                        break;
-                    case 4:
-                        second_Letter_Array[i] = 'D';
-                        second_amount++;
-                        break;
-                    case 6:
-                        second_Letter_Array[i] = 'f';
-                        break;
-                    case 8:
-                        second_Letter_Array[i] = 'H';
-                        second_amount++;
-                        break;
-                    case 10:
-                        second_Letter_Array[i] = 'J';
-                        second_amount++;
-                        break;
-                    case 12:
-                        second_Letter_Array[i] = 'l';
-                        break;
-                    case 14:
-                        second_Letter_Array[i] = 'n';
-                        break;
-                    case 16:
-                        second_Letter_Array[i] = 'p';
-                        break;
-                    case 18:
-                        second_Letter_Array[i] = 'r';
-                        break;
-                    case 20:
-                        second_Letter_Array[i] = 't';
-                        break;
-                    case 22:
-                        second_Letter_Array[i] = 'v';
-                        break;
-                    case 24:
-                        second_Letter_Array[i] = 'x';
-                        break;
-                    case 26:
-                        second_Letter_Array[i] = 'z';
-                        break;
+                    second_amount++;
                 }
             }
 
+            Console.WriteLine(str.Length);
             Console.WriteLine("\nМассив с нечётными буквами:");
             for (int i = 0; i < n; i++)
             {
